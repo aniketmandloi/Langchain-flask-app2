@@ -33,9 +33,9 @@ Flask-Langchain-Chatbot is a web application that utilizes LangChain technology 
 
 4.Run database migrations:
 
-    python manage.py db init
-    python manage.py db migrate
-    python manage.py db upgrade
+        python manage.py db init
+        python manage.py db migrate
+        python manage.py db upgrade
 
 ## Usage
 
