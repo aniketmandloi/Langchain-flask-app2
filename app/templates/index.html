@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>LangChain App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>LangChain App</h1>
+        <form id="prompt-form">
+            <label for="prompt">Enter a prompt:</label>
+            <textarea id="prompt" name="prompt" rows="4" required></textarea>
+            <button type="submit">Generate Response</button>
+        </form>
+        <div id="response"></div>
+        <div id="sentiment"></div>
+    </div>
+    <script>
+        document.getElementById('prompt-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const prompt = document.getElementById('prompt').value;
+            fetch('/', {
+                method: 'POST',
+                body: new URLSearchParams({ 'prompt': prompt }),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('response').innerText = data.response;
+                document.getElementById('sentiment').innerText = `Sentiment: ${data.sentiment}`;
+            });
+        });
+    </script>
+</body>
+</html>
