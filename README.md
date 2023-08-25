@@ -66,10 +66,7 @@ Please refer to the CONTRIBUTING.md file for more information.
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-
-    Copy the above markdown content and paste it into your project's `README.md` file. Modify any placeholders such as `aniketmandloi` and ensure that the content fits your project structure and details accurately.
+This project is licensed under aniket. See the LICENSE file for details.
 
 
 
