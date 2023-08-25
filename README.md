@@ -22,17 +22,55 @@ Flask-Langchain-Chatbot is a web application that utilizes LangChain technology 
 
 1. Clone the repository:
 
-   
-   git clone https://github.com/your-username/Flask-Langchain-Chatbot.git
-   cd Flask-Langchain-Chatbot
-
+        git clone https://github.com/your-username/Flask-Langchain-Chatbot.git
+        cd Flask-Langchain-Chatbot
 
 2. Install dependencies:
-3. Create a PostgreSQL database and configure the config.py file with your database URI and OpenAI API key.
-4. Run database migrations:
 
-  ```sh
-  python manage.py db init
-  python manage.py db migrate
-  python manage.py db upgrade
+        pip install -r requirements.txt
+
+3.Create a PostgreSQL database and configure the config.py file with your database URI and OpenAI API key.
+
+4.Run database migrations:
+
+    python manage.py db init
+    python manage.py db migrate
+    python manage.py db upgrade
+
+## Usage
+
+1. Start the Flask development server:
+
+        python main.py
+
+2. Access the web interface in your browser at http://localhost:5000.
+
+3. Enter your queries and interact with the AI-driven chatbot. Responses will be displayed on the web page.
+
+## Configuration
+Update the config.py file to configure the application settings. You need to provide the following information:
+
+1. SECRET_KEY: Secret key for session management.
+2. SQLALCHEMY_DATABASE_URI: PostgreSQL database URI.
+3. OPENAI_API_KEY: Your OpenAI API key.
+
+## Contributing
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and ensure tests pass.
+4. Open a pull request.
+
+Please refer to the CONTRIBUTING.md file for more information.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+    Copy the above markdown content and paste it into your project's `README.md` file. Modify any placeholders such as `aniketmandloi` and ensure that the content fits your project structure and details accurately.
+
+
+
 
